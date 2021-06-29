@@ -1,5 +1,5 @@
 # For MSSD Application
-# Program by: TAI KOK HING  
+# Program by: tkokhing
 
 from msvcrt import getch
 

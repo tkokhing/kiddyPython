@@ -8,3 +8,10 @@ There are kiddy programs, and definitely more to improve on...
 
 
 Basically... I need to find more exercises to sharpen my coding skills!
+
+**Other Areas**
+
+Found this learning path from CognitiveClass.ai, namely **Applied Data Science with Python**. It covers the following (1) Data Analysis with Python, (2) Data Visualization with Python and (3) Python for Data Science. 
+
+Sounds just right for me :) 
+

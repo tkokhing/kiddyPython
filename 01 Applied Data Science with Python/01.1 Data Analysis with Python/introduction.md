@@ -40,5 +40,5 @@ To learn how to analyze data in Python, we'll be answering the following questio
     *	StatsModels - explore data, estimate statistical models, and perform statistical tests.
 
 ## My recordings for the exercise 
-'''
 
+*	[File](https://github.com/tkokhing/kiddyPython/blob/main/01%20Applied%20Data%20Science%20with%20Python/01.1%20Data%20Analysis%20with%20Python/myPandainout.py) is attached. 

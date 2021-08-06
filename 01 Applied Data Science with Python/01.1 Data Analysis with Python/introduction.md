@@ -8,14 +8,19 @@ Capture some of my thoughts, discovery and lesson learnt after going through [Da
 
 ## Ask the Right Question
 
-To learn how to analyze data in Python, we need to ask the right question focusing on 'estimate' and 'predict' on what data source is curreently available. E.g. Can we estimate the price of a used car based past transactions? and what is the prediction of tomorrow's weather based on Y-O-Y trend?
+To learn how to analyze data in Python, we need to ask the right question focusing on 'estimate' and 'predict' on what data source is currently available. E.g. 
 
-*   To answer this question, we are going to (i) use various Python packages to perform data cleaning, (ii) exploratory data analysis, (iii) model development and (iv) model evaluation.
-    *   Data does not mean information unless you decipher the information and insights from raw data
-    *   For example, is there data on the prices of other cars and their characteristics?
+*   Can we estimate the price of a used car based past transactions? and what is the prediction of tomorrow's weather based on Y-O-Y trend?
+
+*   But questioning does not end here. Data does not mean information unless you go deeper (many angle to attack!) to decipher the information and insights from raw data
+    *   Is there data on the prices of other cars and their characteristics?
     *   What features of cars affect their prices? Colour? Brand? Does horsepower also affect the selling price, or perhaps, something else?
 
+To answer these questions, we will use various Python packages to (i) perform data cleaning, (ii) exploratory data analysis, (iii) model development and (iv) model evaluation.
+
 ## Three Main Packages in Python
+
+Cognitiveclass.ai groups them into three categories
 
 *   Scientific Computing Libraries
     *	Python – primarily a two-dimensional table consisting of column and row labels, which are called a DataFrame.

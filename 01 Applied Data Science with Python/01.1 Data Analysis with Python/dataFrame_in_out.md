@@ -63,5 +63,7 @@ Note that there are various formats for a dataset: .csv, .json, .xlsx  etc, stor
 >> 
 >> df\[\['num-of-doors','length','compression-ratio','body-style']].describe()
 >> 
+>> df\['num-of-doors','length','compression-ratio','body-style'].describe()
+>> 
 
 *	My python [file](https://github.com/tkokhing/kiddyPython/blob/main/01%20Applied%20Data%20Science%20with%20Python/01.1%20Data%20Analysis%20with%20Python/myPandainout.py) is attached. 

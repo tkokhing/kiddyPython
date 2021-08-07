@@ -11,6 +11,7 @@ sourcepath = 'https://archive.ics.uci.edu/ml/machine-learning-databases/autos/im
 df = pd.read_csv(sourcepath)
 df.columns=headers
 
+
 """
 print('Reading the first 5 rows')
 print(df.head())
@@ -31,9 +32,10 @@ print(df.tail())
 # Rememeber to have quotes for all. 
 # This code does exist ==> (df.describe(include=all) ==> do not get confuze!
 
+print('\n')
 print('Analyse all  the columns including non-statisticall inside the df')
 print(df.describe(include='all'))
-
+print('\n')
 """
 
 Analyse all  the columns including non-statisticall inside the df
@@ -51,9 +53,10 @@ min      -2.000000               NaN     NaN       NaN        NaN          NaN  
 max       3.000000               NaN     NaN       NaN        NaN          NaN  ...         23.000000        NaN      NaN   49.000000    54.000000    NaN
 """
 
-
-print('Describe the two selected columns length and compression-ratio please')
+print('\n')
+print('Double Sq bracket - Describe the two selected columns length and compression-ratio please')
 print(df[['length','compression-ratio']].describe())
+print('\n')
 """
 Describe the two selected columns length and compression-ratio please
 
@@ -68,26 +71,98 @@ min    141.100000           7.000000
 max    208.100000          23.000000   
 
 """
-
-
-
 print('\n')
-print('Describe the selected columns num-of-doors and body-style please')
-print(df[['num-of-doors','body-style']].describe())
+print('Double Sq bracket - Describe the 1 selected columns compression-ratio please')
+print(df[['compression-ratio']].describe())
 print('\n')
 
 '''
-Describe the selected columns num-of-doors and body-style please
+Double Sq bracket - Describe the 1 selected columns compression-ratio please
+       compression-ratio
+count         204.000000
+mean           10.148137
+std             3.981000
+min             7.000000
+25%             8.575000
+50%             9.000000
+75%             9.400000
+max            23.000000
+'''
+
+
+print('\n')
+print('Single Sq bracket - Describe the 1 selected columns compression-ratio please')
+print(df['compression-ratio'].describe())
+
+"""
+
+Single Sq bracket - Describe the 1 selected columns compression-ratio please
+count    204.000000
+mean      10.148137
+std        3.981000
+min        7.000000
+25%        8.575000
+50%        9.000000
+75%        9.400000
+max       23.000000
+Name: compression-ratio, dtype: float64
+"""
+
+
+print('\n')
+print('Double Sq bracket - Describe the selected 2 columns num-of-doors and body-style please')
+print(df[['num-of-doors','body-style']].describe())
+print('\n')
+
+
+'''
+Double Sq bracket - Describe the selected 2 columns num-of-doors and body-style please
        num-of-doors body-style
 count           204        204
 unique            3          5
 top            four      sedan
 freq            114         96
+'''
 
-# # num-of-doors unique is 3 is because two, four and ?  inside the data source. 
-# Need to clean up later exercise
+print('\n')
+print('Double Sq bracket - Describe the selected 1 column num-of-doors please')
+print(df[['num-of-doors']].describe())
+print('\n')
 
 '''
+Double Sq bracket - Describe the selected 1 column num-of-doors please
+       num-of-doors
+count           204
+unique            3
+top            four
+freq            114
+
+'''
+print('\n')
+print('Single Sq bracket - Describe the 1 selected column num-of-doors please')
+print(df['num-of-doors'].describe())
+print('\n')
+
+"""
+Single Sq bracket - Describe the 1 selected column num-of-doors please
+count      204
+unique       3
+top       four
+freq       114
+Name: num-of-doors, dtype: object
+"""
+
+
+
+
+#print('\n')
+#print('Single Sq bracket - Describe the selected 2 columns num-of-doors and body-style please')
+#print(df['num-of-doors','body-style'].describe())
+#print('\n')
+
+# The above will give error indexer = self.columns.get_loc(key) and raise KeyError(key) from err
+
+
 
 print('\n')
 print('Mix - Describe the two selected statistical columns length and compression-ratio and\
@@ -135,6 +210,8 @@ List column num-of-doors only!
 202         four
 203         four
 
+[204 rows x 1 columns]
+
 """
 
 # After adding header, now write a new csv file to local. Which is done, so OFF it.
@@ -143,39 +220,89 @@ List column num-of-doors only!
 #df.to_csv(outpath)
 
 # dtypes does not have brackets because it is a property, not a METHOD like describe and info  
+print('\n')
 print('Showing data type of every col of the df')
 print(df.dtypes)
-
+print('\n')
 """
 Showing data type of every col of the df
 symboling              int64
 normalized-losses     object
 make                  object
 fuel-type             object
-until 26th col. .  .
+aspiration            object
+num-of-doors          object
+body-style            object
+drive-wheels          object
+engine-location       object
+wheel-base           float64
+length               float64
+width                float64
+height               float64
+curb-weight            int64
+engine-type           object
+num-of-cylinders      object
+engine-size            int64
+fuel-system           object
+bore                  object
+stroke                object
+compression-ratio    float64
+horsepower            object
+peak-rpm              object
+city-mpg               int64
+highway-mpg            int64
+price                 object
+dtype: object
 """
 
 
 # df.info ==> shows more resolution of the df than dtypes 
+print('\n')
 print('Showing INFO of the df')
 print(df.info())
-
+print('\n')
 '''
 Showing INFO of the df
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 204 entries, 0 to 203
 Data columns (total 26 columns):
- #   Column             Non-Null Count  Dtype  
----  ------             --------------  -----  
- 0   symboling          204 non-null    int64  
- 1   normalized-losses  204 non-null    object 
- 2   make               204 non-null    object 
- until 26th col. .  .
+ #   Column             Non-Null Count  Dtype
+---  ------             --------------  -----
+ 0   symboling          204 non-null    int64
+ 1   normalized-losses  204 non-null    object
+ 2   make               204 non-null    object
+ 3   fuel-type          204 non-null    object
+ 4   aspiration         204 non-null    object
+ 5   num-of-doors       204 non-null    object
+ 6   body-style         204 non-null    object
+ 7   drive-wheels       204 non-null    object
+ 8   engine-location    204 non-null    object
+ 9   wheel-base         204 non-null    float64
+ 10  length             204 non-null    float64
+ 11  width              204 non-null    float64
+ 12  height             204 non-null    float64
+ 13  curb-weight        204 non-null    int64
+ 14  engine-type        204 non-null    object
+ 15  num-of-cylinders   204 non-null    object
+ 16  engine-size        204 non-null    int64
+ 17  fuel-system        204 non-null    object
+ 18  bore               204 non-null    object
+ 19  stroke             204 non-null    object
+ 20  compression-ratio  204 non-null    float64
+ 21  horsepower         204 non-null    object
+ 22  peak-rpm           204 non-null    object
+ 23  city-mpg           204 non-null    int64
+ 24  highway-mpg        204 non-null    int64
+ 25  price              204 non-null    object
+dtypes: float64(5), int64(5), object(16)
+memory usage: 41.6+ KB
+None
 
 '''
+print('\n')
 print('Showing COLUMN header of the df')
 print(df.columns)
-
+print('\n')
 """ 
 # interesting way to display of columns !
 
@@ -190,6 +317,62 @@ Index(['symboling', 'normalized-losses', 'make', 'fuel-type', 'aspiration',
       dtype='object')
 
 """
+
+
+print('\n')
+print('Reading the first 5 rows')
+print(df.head())
+print('\n')
+
+'''
+Reading the first 5 rows
+   symboling normalized-losses         make fuel-type  ... peak-rpm city-mpg highway-mpg  price
+0          3                 ?  alfa-romero       gas  ...     5000       21          27  16500
+1          1                 ?  alfa-romero       gas  ...     5000       19          26  16500
+2          2               164         audi       gas  ...     5500       24          30  13950
+3          2               164         audi       gas  ...     5500       18          22  17450
+4          2                 ?         audi       gas  ...     5500       19          25  15250
+
+[5 rows x 26 columns]
+'''
+
+
+print('\n')
+print('Reading the last 5 rows')
+print(df.tail())
+print('\n')
+
+"""
+Reading the last 5 rows
+     symboling normalized-losses   make fuel-type aspiration  ... horsepower peak-rpm city-mpg highway-mpg  price
+199         -1                95  volvo       gas        std  ...        114     5400       23          28  16845 
+200         -1                95  volvo       gas      turbo  ...        160     5300       19          25  19045 
+201         -1                95  volvo       gas        std  ...        134     5500       18          23  21485 
+202         -1                95  volvo    diesel      turbo  ...        106     4800       26          27  22470 
+203         -1                95  volvo       gas      turbo  ...        114     5400       19          25  22625 
+
+[5 rows x 26 columns]
+"""
+
+
+print('\n')
+print('Added 1 to the first column symboling, but showing tail')
+df[['symboling']]=df[['symboling']]+1
+print(df.tail())
+print('\n')
+
+
+'''
+Added 1 to the first column symboling, but showing tail
+     symboling normalized-losses   make fuel-type aspiration  ... horsepower peak-rpm city-mpg highway-mpg  price
+199          0                95  volvo       gas        std  ...        114     5400       23          28  16845 
+200          0                95  volvo       gas      turbo  ...        160     5300       19          25  19045 
+201          0                95  volvo       gas        std  ...        134     5500       18          23  21485 
+202          0                95  volvo    diesel      turbo  ...        106     4800       26          27  22470 
+203          0                95  volvo       gas      turbo  ...        114     5400       19          25  22625 
+
+[5 rows x 26 columns]
+'''
 
 
 

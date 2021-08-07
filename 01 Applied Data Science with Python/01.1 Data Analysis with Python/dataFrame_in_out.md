@@ -57,7 +57,7 @@ Note that there are various formats for a dataset: .csv, .json, .xlsx  etc, stor
 >>  
 
 
-> Describing all _**Vs**_ mixing two selected statistical columns Int-type "length" and "compression-ratio" and two non-statistical column Object-type "num-of-doors" and "body-style please". 
+> Describing all _**Vs**_ mixing two selected statistical columns (Int-type) "length" and "compression-ratio" with two non-statistical column (Object-type) "num-of-doors" and "body-style". 
 > What will output be?
 >> df.describe(include='all')
 >> 

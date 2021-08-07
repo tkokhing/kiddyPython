@@ -33,7 +33,7 @@ Cognitiveclass.ai groups them into three categories
     *	Scikit-learn - statistical modeling, including regression, classification, clustering …
     *	StatsModels - explore data, estimate statistical models, and perform statistical tests.
 
-*   Note that there are various formats for a dataset: .csv, .json, .xlsx  etc, stored either on local machine or online. 
+Note that there are various formats for a dataset: .csv, .json, .xlsx  etc, stored either on local machine or online. 
 
 | Data Formate |        Read       |            Save |
 | ------------ | :---------------: | --------------: |
@@ -46,5 +46,22 @@ Cognitiveclass.ai groups them into three categories
 
 ## My recordings for the exercise 
 
-*	Data source: https://archive.ics.uci.edu/ml/machine-learning-databases/autos/ 
-*	[File](https://github.com/tkokhing/kiddyPython/blob/main/01%20Applied%20Data%20Science%20with%20Python/01.1%20Data%20Analysis%20with%20Python/myPandainout.py) is attached. 
+*	The data source which was used is taken from here: https://archive.ics.uci.edu/ml/machine-learning-databases/autos/ 
+*	My observations below. Do see if you can tell the differences in the output without running the scripts. Just some e.g. 
+
+> Double _**Vs**_ Single Sq bracket - Describe the 1 selected column "compression-ratio"
+>> 
+>> df\[\['compression-ratio']].describe()
+>> 
+>> df\['compression-ratio'].describe()
+>>  
+
+
+> Describing all _**Vs**_ mixing two selected statistical columns Int-type "length" and "compression-ratio" and two non-statistical column Object-type "num-of-doors" and "body-style please". 
+> What will output be?
+>> df.describe(include='all')
+>> 
+>> df\[\['num-of-doors','length','compression-ratio','body-style']].describe()
+>> 
+
+*	My python [file](https://github.com/tkokhing/kiddyPython/blob/main/01%20Applied%20Data%20Science%20with%20Python/01.1%20Data%20Analysis%20with%20Python/myPandainout.py) is attached. 
